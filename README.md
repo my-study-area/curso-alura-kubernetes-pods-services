@@ -27,4 +27,19 @@ kubectl describe pod nginx-pod
 # edita as propriedade de um pod
 kubectl edit pod nginx-pod
 
+# cria um pod declarativo
+kubectl apply -f ./primeiro-pod.yaml
+```
+
+Exemplo de arquivo declarativo:
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: primeiro-pod-declarativo
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:stable
+
 ```
