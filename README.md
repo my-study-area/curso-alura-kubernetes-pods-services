@@ -29,9 +29,27 @@ kubectl edit pod nginx-pod
 
 # cria um pod declarativo
 kubectl apply -f ./primeiro-pod.yaml
+
+# deleta pod nginx-pod
+kubectl delete pod nginx-pod
+
+# deleta pod declarativamente
+kubectl delete -f ./primeiro-pod.yaml
+
+#
+kubectl apply -f ./portal-noticias.yaml
+
+# acessa terminal
+kubectl exec -it portal-noticias -- bash
+
+# lista os pods no formato wide
+kubectl get pods -o wide
+
+# lista os services
+kubectl get svc
 ```
 
-Exemplo de arquivo declarativo:
+Exemplo de arquivo declarativo de um pod:
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -43,3 +61,6 @@ spec:
       image: nginx:stable
 
 ```
+- [referência para pods](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/)
+
+- [referência para services](https://kubernetes.io/docs/reference/kubernetes-api/service-resources/)
