@@ -47,6 +47,12 @@ kubectl get pods -o wide
 
 # lista os services
 kubectl get svc
+
+# removes todos os pods
+kubectl delete pods --all
+
+# removes todos os services
+kubectl delete services --all
 ```
 
 Exemplo de arquivo declarativo de um pod:
