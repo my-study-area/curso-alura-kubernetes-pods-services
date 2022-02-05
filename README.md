@@ -77,6 +77,12 @@ kubectl delete pods --all
 
 # removes todos os services
 kubectl delete services --all
+
+# instala ping dentro do container
+apt-get update && apt-get install -y iputils-ping
+
+# instala mysqlclient no container
+apt-get install -y default-mysql-client
 ```
 
 Exemplo de arquivo declarativo de um pod:
