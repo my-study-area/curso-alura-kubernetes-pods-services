@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: db-configmap
 data:
-  MYSQL_ROOT_PASSWORD: 123
+  MYSQL_ROOT_PASSWORD: qwe
   MYSQL_DATABASE: banco
-  MYSQL_PASSWORD: 123
+  MYSQL_PASSWORD: qwe
