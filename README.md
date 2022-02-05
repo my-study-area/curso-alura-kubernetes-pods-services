@@ -1,6 +1,30 @@
 # curso-alura-kubernetes-pods-services
 Curso de Kubernetes: Pods, Services e ConfigMaps
 
+## Inicializa aplicação
+```bash
+# inicializa o node
+minikube start --vm-driver=virtualbox
+
+# removes os pods, configmaps e svc
+kubectl delete pod --all
+kubectl delete configmap --all
+kubectl delete svc --all
+
+# inicializa a aplicação
+kubectl apply -f db-configmap.yaml
+kubectl apply -f portal-configmap.yaml
+kubectl apply -f sistema-configmap.yaml
+
+kubectl apply -f portal-noticias.yaml
+kubectl apply -f sistema-noticias.yaml
+kubectl apply -f db-noticias.yaml
+
+kubectl apply -f svc-db-noticias.yaml
+kubectl apply -f svc-portal-noticias.yaml
+kubectl apply -f svc-sistema-noticias.yaml
+```
+
 ## Anotações
 ```
 # inicia um cluster kubernetes
