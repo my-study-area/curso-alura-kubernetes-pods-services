@@ -8,3 +8,6 @@ spec:
   containers:
     - name: portal-noticias-container
       image: aluracursos/portal-noticias:1
+      envFrom:
+        - configMapRef:
+            name: portal-configmap
